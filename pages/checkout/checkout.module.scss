@@ -1,0 +1,26 @@
+@import '../../styles/variables';
+
+.checkout {
+  width: $fullWidth;
+  padding: $mainPadding;
+
+  .wrapper {
+    width: $width;
+    max-width: $maxWidth;
+    margin: 0 auto;
+
+    > header {
+      width: $fullWidth;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .checkout {
+    .wrapper {
+      max-width: $fullWidth;
+      padding: 0 1rem;
+    }
+  }
+}

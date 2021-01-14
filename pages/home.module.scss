@@ -1,0 +1,19 @@
+@import '../styles/variables';
+
+.home {
+  width: $fullWidth;
+
+  .wrapper {
+    width: $width;
+    max-width: $maxWidth;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .home {
+    .wrapper {
+      max-width: $fullWidth;
+    }
+  }
+}

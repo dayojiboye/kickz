@@ -1,0 +1,50 @@
+@import '../../styles/variables';
+
+.homeBody {
+  width: $fullWidth;
+  display: flex;
+  height: 100%;
+
+  .women,
+  .men {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   > a {
+      background: white;
+      border: 1px solid white;
+      width: 100px;
+      padding: 1rem;
+      text-align: center;
+      color: $primary;
+      font-weight: bold;
+      text-transform: capitalize;
+      @include transition(all 0.4s ease-in-out);
+
+      &:hover {
+        background: $primary;
+        color: white;
+      }
+    }
+  }
+
+  .women {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+      url('/images/photo-1472749551955-e2319841d9a0.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-right: 5px solid white;
+  }
+
+  .men {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+      url('/images/photo-1473966968600-fa801b869a1a.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

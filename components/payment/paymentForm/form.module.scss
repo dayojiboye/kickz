@@ -1,0 +1,49 @@
+@import '../../../styles/variables';
+
+.form {
+  width: $fullWidth;
+  margin: 1rem 0;
+
+  .formItem {
+    margin-bottom: 0.7rem;
+
+    label {
+      font-weight: bold;
+      color: #7b7b7b;
+    }
+
+    .input {
+      @include transition(all 0.4s ease-in-out);
+    }
+  }
+
+  .buttonWrapper {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+
+    button {
+      width: 170px;
+      max-width: 90%;
+      padding: 1.5rem 0;
+      line-height: 0;
+      font-weight: bold;
+      background: $primary;
+      border: 1px solid $primary;
+      @include transition(all 0.4s ease-in-out);
+      box-shadow: $boxShadow;
+      white-space: normal;
+      margin: auto;
+      display: block;
+
+      &:hover {
+        background: $buttonHover;
+        border: 1px solid $buttonHover;
+      }
+
+      &:disabled {
+        background: $ghost;
+        border: 1px solid $ghost;
+      }
+    }
+  }
+}

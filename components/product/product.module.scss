@@ -1,0 +1,141 @@
+@import '../../styles/variables';
+
+.product {
+  width: $fullWidth;
+  padding: $mainPadding;
+
+  .wrapper {
+    width: $width;
+    max-width: $maxWidth;
+    margin: 0 auto;
+
+    .item {
+      width: $fullWidth;
+      display: flex;
+      justify-content: space-between;
+
+      .image {
+        width: 50%;
+        box-shadow: $boxShadow;
+
+        > img {
+          width: $fullWidth;
+          height: 300px;
+          object-fit: cover;
+        }
+      }
+
+      .content {
+        width: 45%;
+
+        .details {
+          width: $fullWidth;
+
+          > .name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+            text-transform: capitalize;
+          }
+        }
+
+        .action {
+          width: $fullWidth;
+          height: 43px;
+          margin-top: 1rem;
+          display: flex;
+
+          .inputNumber {
+            width: 60%;
+            max-width: 200px;
+            min-width: 50px;
+            height: $fullWidth;
+            padding: 0 1rem;
+            border: 1px solid $ghost;
+            border-radius: 3px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+            @include transition(all 0.4s ease-in-out);
+
+            &:hover,
+            &:focus {
+              border: 1px solid $primary;
+            }
+          }
+
+          > .actionBtn,
+          > a {
+            max-width: 200px;
+            height: $fullWidth;
+            border: 1px solid $primary;
+            border-radius: 3px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            background: $primary;
+            font-weight: bold;
+            color: white;
+            @include transition(all 0.4s ease-in-out);
+
+            &:hover {
+              background: $borderColor;
+              border: 1px solid $borderColor;
+            }
+          }
+
+          > a {
+            padding: 0 0.9375rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            text-align: center;
+            white-space: nowrap;
+          }
+
+          .actionBtn {
+            &:disabled {
+              background: $ghost;
+              border: 1px solid $ghost;
+            }
+          }
+        }
+      }
+    }
+
+    .about {
+      margin-top: 3rem;
+
+      h1 {
+        font-size: 1.7rem;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .product {
+    .wrapper {
+      max-width: $fullWidth;
+      padding: 0 1rem;
+
+      .item {
+        flex-direction: column;
+
+        .image {
+          width: $fullWidth;
+          margin-bottom: 1rem;
+        }
+
+        .content {
+          width: $fullWidth;
+        }
+      }
+    }
+  }
+}

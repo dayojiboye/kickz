@@ -1,0 +1,99 @@
+@import '../../styles/variables';
+
+.emptyCrtMsg {
+  width: $fullWidth;
+  margin-top: 1rem;
+  padding: 1rem 0;
+  text-align: center;
+
+  p {
+    margin-top: 1rem;
+  }
+
+  > a {
+    background: $borderColor;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid $borderColor;
+    border-radius: 3px;
+    box-shadow: $boxShadow;
+    @include transition(all 0.4s ease-in-out);
+    color: white;
+
+    &:hover {
+      background: $buttonHover;
+      border: 1px solid $buttonHover;
+    }
+  }
+}
+
+.cart {
+  width: $fullWidth;
+  margin-top: 1rem;
+  padding: 1rem 0;
+
+  > ul {
+    width: $fullWidth;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      // margin-bottom: 2rem;
+      padding: 1rem;
+      border-bottom: 1px solid $primary;
+    }
+  }
+
+  .totalPrice {
+    width: $fullWidth;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .cartFooter {
+    width: $fullWidth;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > a {
+      width: 166px;
+      color: black;
+      border: 1px solid $primary;
+      border-radius: 3px;
+      padding: 0.5rem 0;
+      text-align: center;
+      @include transition(all 0.4s ease-in-out);
+
+      &:hover {
+        background: $primary;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .cart {
+    > ul {
+      li {
+        padding: 1rem 0.5rem;
+      }
+    }
+
+    .cartFooter {
+      flex-direction: column;
+
+      > a {
+        &:first-child {
+          margin-top: 1rem;
+          order: 2;
+        }
+      }
+    }
+  }
+}

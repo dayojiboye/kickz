@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+
+.cart {
+  width: $fullWidth;
+  padding: $mainPadding;
+
+  .wrapper {
+    width: $width;
+    max-width: $maxWidth;
+    margin: 0 auto;
+
+    .header {
+      background: $primary;
+      padding: 1rem;
+      box-shadow: $boxShadow;
+      text-align: center;
+
+      h1 {
+        margin: 0;
+        color: white;
+      }
+
+      span {
+        color: white !important;
+        font-weight: bold;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .cart {
+    .wrapper {
+      // width: $fullWidth;
+      max-width: $fullWidth;
+      padding: 0 1rem;
+    }
+  }
+}

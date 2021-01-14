@@ -1,0 +1,44 @@
+@import '../../../../styles/variables';
+
+.card {
+  width: 30%;
+  max-height: 600px;
+  margin-bottom: 1rem;
+  border: 1px solid $ghost;
+  color: black;
+  @include transition(all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1));
+
+  &:hover {
+    box-shadow: $boxShadow;
+    color: black;
+  }
+
+  // .cardImage {
+  //   width: $fullWidth;
+
+  //   img {
+  //     width: $fullWidth;
+  //     object-fit: cover;
+  //     height: 170px;
+  //   }
+  // }
+
+  .cardDetails {
+    width: $fullWidth;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    // height: 140px;
+
+    .name {
+      margin-bottom: 1rem;
+      text-transform: capitalize;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: $fullWidth;
+  }
+}

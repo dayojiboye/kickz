@@ -1,0 +1,32 @@
+@import '../../../styles/variables';
+
+.pagination {
+  width: $fullWidth;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+
+  .loadButton {
+    height: auto;
+    background: transparent;
+    border: 1px solid $primary;
+    color: $primary;
+
+    &:hover {
+      color: $primary;
+    }
+
+    &:disabled {
+      background: $ghost;
+      border: 1px solid $ghost;
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .pagination {
+    justify-content: center;
+    align-items: center;
+  }
+}

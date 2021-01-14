@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+
+.dashboard {
+  .table {
+    width: $fullWidth;
+
+    th {
+      font-weight: bold !important;
+    }
+
+    tbody {
+      tr {
+        cursor: pointer;
+
+        td {
+          padding: 2rem 0;
+        }
+      }
+    }
+  }
+}

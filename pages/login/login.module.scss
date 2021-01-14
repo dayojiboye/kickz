@@ -1,0 +1,58 @@
+@import '../../styles/variables';
+
+.login {
+  width: $fullWidth;
+  padding: $mainPadding;
+
+  .wrapper {
+    width: $width;
+    max-width: $maxWidth;
+    margin: 0 auto;
+
+    .welcomeBox {
+      text-align: center;
+      margin-bottom: 1rem;
+      background: $primary;
+      padding: 1rem;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      box-shadow: $boxShadow;
+
+      h1 {
+        margin: 0;
+        font-size: 1.4rem;
+        color: white;
+        font-weight: bold;
+      }
+    }
+
+    .footerBox {
+      margin-top: 1rem;
+      background: $primary;
+      box-shadow: $boxShadow;
+      padding: 1rem;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+
+      small {
+        font-weight: bold;
+        font-size: 0.9rem;
+        color: white;
+
+        a {
+          color: $authLinks;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .login {
+    .wrapper {
+      max-width: $fullWidth;
+      padding: 0 1rem;
+    }
+  }
+}

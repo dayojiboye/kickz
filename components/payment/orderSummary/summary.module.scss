@@ -1,0 +1,10 @@
+@import '../../../styles/variables';
+
+.orderSummary {
+  width: $fullWidth;
+  margin: 2rem 0;
+
+  .orderTotal {
+    margin: 1.5rem 0 2rem;
+  }
+}

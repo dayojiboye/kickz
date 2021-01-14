@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+
+.order {
+  width: $fullWidth;
+  padding: $mainPadding;
+
+  .wrapper {
+    width: $width;
+    max-width: $maxWidth;
+    margin: 0 auto;
+
+    .header {
+      width: $fullWidth;
+
+      h1 {
+        word-wrap: break-word;
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+    }
+
+    .total {
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .order {
+    .wrapper {
+      max-width: $fullWidth;
+      padding: 0 1rem;
+    }
+  }
+}

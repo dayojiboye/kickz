@@ -1,0 +1,28 @@
+@import '../../../styles/variables';
+
+.addProductBar {
+  width: $fullWidth;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  // border-bottom: 1px solid $ghost;
+  // box-shadow: $boxShadow;
+
+  button {
+    background: transparent;
+    border: 1px solid $primary;
+    height: auto;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    color: $primary;
+    @include transition(all 0.4s ease-in-out);
+
+    &:hover,
+    &:focus {
+      background: transparent;
+      color: $primary;
+      border: 1px solid $primary;
+    }
+  }
+}

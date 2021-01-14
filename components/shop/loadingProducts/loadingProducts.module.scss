@@ -1,0 +1,13 @@
+@import '../../../styles/variables';
+
+.loading {
+  width: $fullWidth;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loadingIcon {
+    font-size: 7rem;
+  }
+}

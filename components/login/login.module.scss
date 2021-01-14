@@ -1,0 +1,66 @@
+@import '../../styles/variables';
+
+.alert {
+  margin-bottom: 1rem;
+}
+
+.form {
+  width: $fullWidth;
+  padding: 1rem;
+  border: 1px solid $ghost;
+
+  .formItem {
+    margin-bottom: 0.7rem;
+
+    label {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #7b7b7b;
+
+      &::before {
+        content: '' !important;
+      }
+    }
+
+    .input {
+      @include transition(all 0.4s ease-in-out);
+
+      .icon {
+        color: $ghost;
+        @include transition(all 0.4s ease-in-out);
+      }
+
+      input {
+        margin-left: 0.3rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .buttonWrapper {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    padding-bottom: 8px;
+
+    button {
+      width: 90px;
+      padding: 0;
+      font-weight: bold;
+      background: $primary;
+      border: 1px solid $primary;
+      @include transition(all 0.4s ease-in-out);
+      box-shadow: $boxShadow;
+      white-space: normal;
+
+      &:hover {
+        background: $buttonHover;
+        border: 1px solid $buttonHover;
+      }
+
+      &:disabled {
+        background: $ghost;
+        border: 1px solid $ghost;
+      }
+    }
+  }
+}

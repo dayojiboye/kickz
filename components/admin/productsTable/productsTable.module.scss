@@ -1,0 +1,47 @@
+@import '../../../styles/variables';
+
+.table {
+  width: $fullWidth;
+  margin-top: 1rem;
+
+  th {
+    text-align: center !important;
+    padding: 2rem 0 !important;
+    font-weight: bold !important;
+  }
+
+  tbody {
+    tr {
+      td {
+        text-align: center;
+        padding: 2rem 0;
+        text-transform: capitalize;
+      }
+
+      .prodImage {
+        width: $maxWidth;
+        height: auto;
+        object-fit: cover;
+      }
+
+      button {
+        background: transparent;
+        color: inherit;
+        border: 1px solid $primary;
+        height: auto;
+
+        &:hover,
+        &:focus {
+          background: transparent;
+          color: inherit;
+          border: 1px solid $primary;
+        }
+      }
+    }
+  }
+}
+
+.more {
+  display: block;
+  margin-top: 1rem;
+}

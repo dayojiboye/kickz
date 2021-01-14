@@ -1,0 +1,42 @@
+@import '../../../styles/variables';
+
+.modal {
+  button {
+    &:nth-of-type(1) {
+      background: transparent;
+      color: $primary;
+      border: 1px solid $primary;
+      padding: 0.6rem 1rem;
+      height: auto;
+
+      &:hover {
+        color: $primary;
+        border: 1px solid $primary;
+      }
+    }
+
+    &:nth-of-type(2) {
+      background: $primary;
+      color: white;
+      border: 1px solid $primary;
+      padding: 0.6rem 1rem;
+      height: auto;
+
+      &:hover {
+        color: white;
+        border: 1px solid $primary;
+      }
+    }
+  }
+
+  button[aria-label='Close'] {
+    color: initial;
+    border: 0;
+    padding: 0;
+
+    &:hover {
+      color: initial !important;
+      border: 0 !important;
+    }
+  }
+}

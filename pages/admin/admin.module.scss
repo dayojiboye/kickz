@@ -1,0 +1,22 @@
+@import '../../styles/variables';
+
+.admin {
+  width: $fullWidth;
+  padding: $mainPadding;
+  // height: 80vh;
+
+  .wrapper {
+    width: $width;
+    max-width: $maxWidth;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin {
+    .wrapper {
+      max-width: $fullWidth;
+      padding: 0 1rem;
+    }
+  }
+}

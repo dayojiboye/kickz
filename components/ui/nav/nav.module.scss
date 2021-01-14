@@ -1,0 +1,65 @@
+@import '../../../styles/variables';
+
+.nav {
+  width: $fullWidth;
+
+  ul {
+    width: $width;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      font-size: 1.2rem;
+      height: 60px;
+      border-left: 1px solid $borderColor;
+      border-right: 1px solid $borderColor;
+      flex: 1;
+
+      > a,
+      > span {
+        height: $fullWidth;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        cursor: pointer;
+        @include transition(all 0.4s ease-in-out);
+
+        &:hover {
+          background: $borderColor;
+        }
+      }
+
+      > a {
+        .badge {
+          margin-left: 1rem;
+          font-weight: bold;
+          font-size: 0.9375rem;
+          line-height: 2;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    ul {
+      max-width: $fullWidth;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      li {
+        width: $fullWidth;
+        border: 0;
+        border-bottom: 1px solid $borderColor;
+      }
+    }
+  }
+}

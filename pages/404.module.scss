@@ -1,0 +1,44 @@
+@import '../styles/variables';
+
+.error {
+  width: $fullWidth;
+  padding: $mainPadding;
+
+  .wrapper {
+    width: $width;
+    max-width: $maxWidth;
+    margin: 0 auto;
+
+    .result {
+      width: $fullWidth;
+      margin: auto;
+      padding: 0;
+
+      .errorBtn {
+        background: $primary;
+        height: auto;
+        padding: 0.7rem;
+        box-shadow: $boxShadow;
+        border: 1px solid $primary;
+        color: white;
+        font-weight: bold;
+        font-family: inherit;
+        @include transition(all 0.4s ease-in-out);
+
+        &:hover {
+          background: $buttonHover;
+          border: 1px solid $buttonHover;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .error {
+    .wrapper {
+      max-width: $fullWidth;
+      padding: 0 1rem;
+    }
+  }
+}

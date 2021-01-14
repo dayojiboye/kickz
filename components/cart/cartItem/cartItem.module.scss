@@ -1,0 +1,79 @@
+@import '../../../styles/variables';
+
+.cartItem {
+  width: $fullWidth;
+  display: flex;
+
+  .image {
+    width: 60%;
+    min-width: 85px;
+  }
+
+  .content {
+    flex: 1;
+    margin-left: 1rem;
+    text-transform: capitalize;
+  }
+}
+
+.actions {
+  width: $fullWidth;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+
+  .remove {
+    .removeBtn {
+      width: 100px;
+      height: auto;
+      padding: 0.5rem 0;
+      text-align: center;
+      background: transparent;
+      color: $primary;
+      font-size: 1rem;
+      border: 0;
+      border-radius: 0;
+      text-shadow: none;
+      box-shadow: none;
+
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+
+  .itemQuantity {
+    display: flex;
+    align-items: center;
+
+    > button {
+      width: auto;
+      height: auto;
+      padding: 0.3rem;
+      background: transparent;
+      color: $primary;
+      font-size: 1.3rem;
+      border: 0;
+      border-radius: 0;
+      text-shadow: none;
+      box-shadow: none;
+
+      &:hover {
+        background: transparent;
+      }
+
+      &:disabled {
+        color: $ghost;
+      }
+    }
+
+    .quantity {
+      margin: 0 0.7rem;
+      padding: 0 0.5rem;
+      text-align: center;
+      border-bottom: 1px solid $primary;
+      border-radius: 3px;
+    }
+  }
+}

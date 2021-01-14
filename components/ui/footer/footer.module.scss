@@ -1,0 +1,25 @@
+@import '../../../styles/variables';
+
+.footer {
+  width: $fullWidth;
+  height: 40px;
+
+  .wrapper {
+    width: $width;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    .wrapper {
+      max-width: $fullWidth;
+      padding: 0 1rem;
+    }
+  }
+}

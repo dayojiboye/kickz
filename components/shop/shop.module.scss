@@ -1,0 +1,34 @@
+@import '../../styles/variables';
+
+.shop {
+  width: $fullWidth;
+  padding: $mainPadding;
+
+  .wrapper {
+    width: $width;
+    max-width: $maxWidth;
+    margin: 0 auto;
+
+    .header {
+      width: $fullWidth;
+
+      h1 {
+        text-align: center;
+        text-transform: capitalize;
+      }
+    }
+
+    .selectFilter {
+      margin: 2rem 0 3rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .shop {
+    .wrapper {
+      max-width: $fullWidth;
+      padding: 0 1rem;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import '../../styles/variables';
+
+.emptyCrtMsg {
+  width: $fullWidth;
+  margin-top: 1rem;
+  padding: 1rem 0;
+  text-align: center;
+
+  p {
+    margin-top: 1rem;
+  }
+
+  > a {
+    background: $borderColor;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid $borderColor;
+    border-radius: 3px;
+    box-shadow: $boxShadow;
+    @include transition(all 0.4s ease-in-out);
+    color: white;
+
+    &:hover {
+      background: $buttonHover;
+      border: 1px solid $buttonHover;
+    }
+  }
+}
+
+.payment {
+  width: $fullWidth;
+  margin-top: 1.5rem;
+
+  > h2 {
+    margin: 1rem 0;
+  }
+
+  .stepsAction {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    > button {
+      width: 100px;
+      max-width: 90%;
+      padding: 1.3rem 0;
+      line-height: 0;
+      font-weight: bold;
+      white-space: normal;
+      text-shadow: none;
+      cursor: pointer;
+    }
+
+    .nextBtn {
+      background: green;
+      border: 1px solid green;
+      @include transition(all 0.4s ease-in-out);
+      box-shadow: $boxShadow;
+
+      &:hover {
+        background: #026602;
+        border: 1px solid #026602;
+      }
+
+      &:disabled {
+        background: $ghost;
+        border: 1px solid $ghost;
+      }
+    }
+
+    .prevBtn {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      color: $primary;
+
+      &:hover {
+        background: $ghost;
+      }
+    }
+
+    .paystackBtn {
+      background: $borderColor;
+      border: 1px solid $borderColor;
+      @include transition(all 0.4s ease-in-out);
+      box-shadow: $boxShadow;
+      margin-left: 5px;
+      border-radius: 3px;
+      color: white;
+      font-size: 14px;
+
+      &:hover {
+        background: $buttonHover;
+        border: 1px solid $buttonHover;
+      }
+    }
+  }
+}
+
+.popup {
+  animation: popup 0.7s linear;
+}
+
+@-webkit-keyframes popup {
+  0% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

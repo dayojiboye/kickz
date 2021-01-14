@@ -1,16 +1,48 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 1rem !important;
+}
+
+/* .ant-form-item-has-error label {
+  color: red !important;
+} */
+
+.ant-empty-description {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.ant-table-content::-webkit-scrollbar {
+  display: none;
+}
+
+.ant-table-content {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.ant-pagination-item {
+  font-family: inherit !important;
+}
+
+input {
+  font-size: 1rem !important;
 }

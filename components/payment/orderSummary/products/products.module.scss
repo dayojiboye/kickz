@@ -1,0 +1,20 @@
+@import '../../../../styles/variables';
+
+.prods {
+  width: $fullWidth;
+  margin: 1.5rem 0;
+
+  .prodImage {
+    > img {
+      width: 80px;
+      object-fit: cover;
+      height: 70px;
+    }
+  }
+
+  .prodInfo {
+    > span {
+      display: block;
+    }
+  }
+}

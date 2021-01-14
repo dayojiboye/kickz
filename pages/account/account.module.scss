@@ -1,0 +1,75 @@
+@import '../../styles/variables';
+
+.account {
+  width: $fullWidth;
+  padding: $mainPadding;
+
+  .wrapper {
+    width: $width;
+    max-width: $maxWidth;
+    margin: 0 auto;
+
+    .header {
+      width: $fullWidth;
+      background: $primary;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 0;
+      box-shadow: $boxShadow;
+
+      .user {
+        margin-left: 1.3rem;
+        text-align: center;
+
+        h1,
+        span {
+          color: white;
+        }
+
+        h1 {
+          font-weight: bold;
+          text-transform: capitalize;
+          margin: 0;
+        }
+
+        span {
+          line-height: 3;
+        }
+      }
+    }
+
+    h2 {
+      font-weight: bold;
+      font-size: 1.8rem;
+      margin: 1.5rem 0;
+
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+
+    .orders {
+      width: $fullWidth;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .account {
+    .wrapper {
+      max-width: $fullWidth;
+      padding: 0 1rem;
+
+      .header {
+        flex-direction: column;
+
+        .user {
+          margin-top: 1.5rem;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
