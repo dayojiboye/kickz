@@ -14,7 +14,9 @@ const dashboard = ({ orders, isLoading }) => {
       dataIndex: 'orderCreatedDate',
       key: 'orderCreatedDate',
       render: (text, record) => (
-        <span>{moment(record).format('DD/MM/YYYY')}</span>
+        <span>
+          {moment(record.orderCreatedDate.toDate()).format('DD/MM/YYYY')}
+        </span>
       ),
     },
     {
